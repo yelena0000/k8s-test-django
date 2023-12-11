@@ -1,4 +1,4 @@
-# Django site
+# Django Site
 
 Докеризированный сайт на Django для экспериментов с Kubernetes.
 
