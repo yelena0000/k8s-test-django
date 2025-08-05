@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: django-pod
+  labels:
+    app: django
+spec:
+  containers:
+  - name: django
+    image: django_app:latest
+    env:
+    - name: SECRET_KEY
+      value: "some-secret-key-for-test"
+    - name: DEBUG
+      value: "TRUE"
+    - name: ALLOWED_HOSTS
+      value: "127.0.0.1,localhost,172.29.248.71"
+    - name: DATABASE_URL
+      value: "postgres://test_k8s:OwOtBep9Frut@172.29.248.71:5432/test_k8s"
+    ports:
+    - containerPort: 80
