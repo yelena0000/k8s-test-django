@@ -15,7 +15,7 @@ spec:
     - name: DEBUG
       value: "TRUE"
     - name: ALLOWED_HOSTS
-      value: "127.0.0.1,localhost,172.29.248.71"
+      value: "127.0.0.1,localhost,172.29.248.71,192.168.59.103"
     - name: DATABASE_URL
       value: "postgres://test_k8s:OwOtBep9Frut@172.29.248.71:5432/test_k8s"
     ports:
