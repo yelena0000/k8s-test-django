@@ -8,6 +8,7 @@ spec:
   containers:
   - name: django
     image: django_app:latest
+    imagePullPolicy: IfNotPresent
     env:
     - name: SECRET_KEY
       value: "some-secret-key-for-test"
