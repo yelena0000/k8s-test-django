@@ -4,6 +4,7 @@ metadata:
   name: django-pod
   labels:
     app: django
+  namespace: default
 spec:
   containers:
   - name: django
