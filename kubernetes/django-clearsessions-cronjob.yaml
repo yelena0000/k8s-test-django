@@ -4,6 +4,7 @@ metadata:
   name: django-clearsessions-cronjob
 spec:
   schedule: "0 2 * * 0"
+  startingDeadlineSeconds: 60
   jobTemplate:
     spec:
       template:
@@ -31,3 +32,4 @@ spec:
                   key: DATABASE_URL
   successfulJobsHistoryLimit: 3
   failedJobsHistoryLimit: 1
+  ttlSecondsAfterFinished: 300
