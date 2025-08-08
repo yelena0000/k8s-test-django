@@ -20,7 +20,7 @@ spec:
     - name: DEBUG
       value: "FALSE"
     - name: ALLOWED_HOSTS
-      value: "127.0.0.1,localhost,192.168.59.107,star-burger.test"
+      value: "127.0.0.1,localhost,192.168.59.107,172.29.248.71,star-burger.test"
     - name: DATABASE_URL
       valueFrom:
         secretKeyRef:
