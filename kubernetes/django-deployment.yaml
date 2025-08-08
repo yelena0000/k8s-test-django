@@ -22,7 +22,7 @@ spec:
         - name: SECRET_KEY
           value: "some-secret-key-for-test"
         - name: DEBUG
-          value: "TRUE"
+          value: "FALSE"
         - name: ALLOWED_HOSTS
           value: "127.0.0.1,localhost,192.168.59.107,172.29.248.71,192.168.59.103"
         - name: DATABASE_URL
