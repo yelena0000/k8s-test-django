@@ -20,12 +20,18 @@ spec:
         imagePullPolicy: IfNotPresent
         env:
         - name: SECRET_KEY
-          value: "some-secret-key-for-test"
+          valueFrom:
+            secretKeyRef:
+              name: django-secret
+              key: SECRET_KEY
         - name: DEBUG
           value: "FALSE"
         - name: ALLOWED_HOSTS
           value: "127.0.0.1,localhost,192.168.59.107,172.29.248.71,192.168.59.103"
         - name: DATABASE_URL
-          value: "postgres://test_k8s:OwOtBep9Frut@172.29.248.71:5432/test_k8s"
+          valueFrom:
+            secretKeyRef:
+              name: django-secret
+              key: DATABASE_URL
         ports:
         - containerPort: 80
