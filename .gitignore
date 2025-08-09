@@ -4,3 +4,9 @@ __pycache__/
 *$py.class
 .idea
 .env
+
+kubernetes/django-pod.yaml
+kubernetes/django-clearsessions-pod.yaml
+kubernetes/docker-compose.db.yml
+
+kubernetes/django-secret.yaml
