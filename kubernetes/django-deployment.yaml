@@ -18,20 +18,10 @@ spec:
       - name: django
         image: django_app:latest
         imagePullPolicy: IfNotPresent
-        env:
-        - name: SECRET_KEY
-          valueFrom:
-            secretKeyRef:
-              name: django-secret
-              key: SECRET_KEY
-        - name: DEBUG
-          value: "FALSE"
-        - name: ALLOWED_HOSTS
-          value: "127.0.0.1,localhost,192.168.59.107,172.29.248.71,star-burger.test"
-        - name: DATABASE_URL
-          valueFrom:
-            secretKeyRef:
-              name: django-secret
-              key: DATABASE_URL
+        envFrom:
+        - secretRef:
+            name: django-secret
+        - configMapRef:
+            name: django-config
         ports:
         - containerPort: 80
