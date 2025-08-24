@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: main-nginx
+  namespace: edu-yelena-malceva
+  uid: 399564eb-9db6-4e4e-847b-6862b203ecc4
+  resourceVersion: '120509278'
+  creationTimestamp: '2025-08-18T09:25:39Z'
+  finalizers:
+    - ingress.ya.ru/final
+  selfLink: /api/v1/namespaces/edu-yelena-malceva/services/main-nginx
+status:
+  loadBalancer: {}
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30422
+  selector:
+    app: main-nginx
+  clusterIP: 10.96.254.236
+  clusterIPs:
+    - 10.96.254.236
+  type: NodePort
+  sessionAffinity: None
+  externalTrafficPolicy: Cluster
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  internalTrafficPolicy: Cluster

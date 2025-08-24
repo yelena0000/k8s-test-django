@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-psql
+  namespace: edu-yelena-malceva
+spec:
+  containers:
+  - name: psql-container
+    image: ubuntu:latest
+    command: ["/bin/sh", "-c", "apt-get update && apt-get install -y postgresql-client && psql -h $PGHOST -p $PGPORT -U $PGUSER -d $PGDATABASE -w -c '\\l' && while true; do sleep 3600; done"]
+    envFrom:
+    - secretRef:
+        name: postgres-ssl
+    env:
+    - name: PGHOST
+      valueFrom:
+        secretKeyRef:
+          name: postgres-ssl
+          key: host
+    - name: PGDATABASE
+      valueFrom:
+        secretKeyRef:
+          name: postgres-ssl
+          key: name
+    - name: PGUSER
+      value: "edu-yelena-malceva"
+    - name: PGPASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: postgres-ssl
+          key: password
+    - name: PGPORT
+      valueFrom:
+        secretKeyRef:
+          name: postgres-ssl
+          key: port
+    - name: PGSSLMODE
+      value: "verify-full"
+    - name: PGSSLROOTCERT
+      value: "/etc/ssl/certs/root.crt"
+    volumeMounts:
+    - name: ssl-certs
+      mountPath: "/etc/ssl/certs"
+      readOnly: true
+  volumes:
+  - name: ssl-certs
+    secret:
+      secretName: postgres-ssl
+      items:
+      - key: root.crt
+        path: root.crt
+      defaultMode: 384
+  restartPolicy: Never
