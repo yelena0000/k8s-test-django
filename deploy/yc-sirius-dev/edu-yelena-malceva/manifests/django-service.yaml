@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: django-service
+  namespace: edu-yelena-malceva
+spec:
+  selector:
+    app: django
+  ports:
+  - port: 8000
+    targetPort: 80
