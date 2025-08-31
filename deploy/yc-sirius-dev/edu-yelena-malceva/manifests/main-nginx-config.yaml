@@ -24,11 +24,11 @@ data:
         }
 
         location /static/ {
-          proxy_pass https://storage.yandexcloud.net/edu-yelena-malceva/;
+          return 301 https://storage.yandexcloud.net/edu-yelena-malceva/static$request_uri;
         }
-
+    
         location /media/ {
-          proxy_pass https://storage.yandexcloud.net/edu-yelena-malceva/;
+          return 301 https://storage.yandexcloud.net/edu-yelena-malceva/media$request_uri;
         }
       }
     }
