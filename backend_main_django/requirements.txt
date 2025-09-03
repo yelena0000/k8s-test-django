@@ -1,3 +1,5 @@
 Django==3.2.2
 environs[django]>=9.5.0
 psycopg2-binary==2.8.5
+boto3==1.26.0
+django-storages==1.13.2
