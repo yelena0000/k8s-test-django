@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: django
-        image: yelena0000/django-site:90e13cf
+        image: yelena0000/django-site:c09dd00
         ports:
         - containerPort: 80
         envFrom:
