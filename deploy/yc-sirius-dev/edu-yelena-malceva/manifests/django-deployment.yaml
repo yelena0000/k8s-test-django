@@ -23,33 +23,10 @@ spec:
             name: postgres-ssl
         - secretRef:
             name: bucket
-        env:
-        - name: DJANGO_SETTINGS_MODULE
-          value: "webapp.settings"
-        - name: SECRET_KEY
-          value: "temp-key-for-dev"
-        - name: DATABASE_URL
-          value: "postgres://edu-yelena-malceva:DlQ%k629CG_fAWnW@c-c9qqnvghed3mn4a48p39.rw.mdb.yandexcloud.net:6432/edu-yelena-malceva?sslmode=verify-full&sslrootcert=/etc/ssl/certs/root.crt"
-        - name: AWS_ACCESS_KEY_ID
-          valueFrom:
-            secretKeyRef:
-              name: bucket
-              key: access_key
-        - name: AWS_SECRET_ACCESS_KEY
-          valueFrom:
-            secretKeyRef:
-              name: bucket
-              key: secret_key
-        - name: BUCKET_NAME
-          valueFrom:
-            secretKeyRef:
-               name: bucket
-               key: bucket_name
-        - name: ENDPOINT_URL
-          valueFrom:
-             secretKeyRef:
-               name: bucket
-               key: endpoint_url
+        - secretRef:
+            name: django-secret
+        - configMapRef:
+            name: django-config
         volumeMounts:
         - name: ssl-certs
           mountPath: /etc/ssl/certs
