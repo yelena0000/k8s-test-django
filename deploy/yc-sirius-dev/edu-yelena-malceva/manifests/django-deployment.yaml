@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: django
-        image: yelena0000/django-site:c09dd00
+        image: yelena0000/django-site:f0e414b
         ports:
         - containerPort: 80
         envFrom:
@@ -38,4 +38,4 @@ spec:
           items:
           - key: root.crt
             path: root.crt
-          defaultMode: 384
+          defaultMode: 420
