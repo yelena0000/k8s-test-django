@@ -5,3 +5,4 @@ metadata:
   namespace: edu-yelena-malceva
 data:
   DJANGO_SETTINGS_MODULE: "webapp.settings"
+  ALLOWED_HOSTS: "127.0.0.1,localhost,edu-yelena-malceva.yc-sirius-dev.pelid.team"
