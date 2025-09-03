@@ -6,3 +6,4 @@ __pycache__/
 .env
 
 local-minikube/manifests/django-secret.yaml
+deploy/yc-sirius-dev/edu-yelena-malceva/manifests/django-secret.yaml
