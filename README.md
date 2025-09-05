@@ -4,6 +4,11 @@
 
 Внутри контейнера Django приложение запускается с помощью Nginx Unit, не путать с Nginx. Сервер Nginx Unit выполняет сразу две функции: как веб-сервер он раздаёт файлы статики и медиа, а в роли сервера-приложений он запускает Python и Django. Таким образом Nginx Unit заменяет собой связку из двух сервисов Nginx и Gunicorn/uWSGI. [Подробнее про Nginx Unit](https://unit.nginx.org/).
 
+## Окружения
+
+- **Локальное (Minikube)**: Инструкции в `local-minikube/docs/README.md`.
+- **Yandex Cloud (yc-sirius-dev)**: Инструкции в `deploy/yc-sirius-dev/edu-yelena-malceva/docs/README.md`. Сайт: https://edu-yelena-malceva.yc-sirius-dev.pelid.team.
+
 ## Как подготовить окружение к локальной разработке
 
 Код в репозитории полностью докеризирован, поэтому для запуска приложения вам понадобится Docker. Инструкции по его установке ищите на официальных сайтах:
