@@ -6,8 +6,13 @@
 
 ## Окружения
 
-- **Локальное (Minikube)**: Инструкции в `local-minikube/docs/README.md`.
-- **Yandex Cloud (yc-sirius-dev)**: Инструкции в `deploy/yc-sirius-dev/edu-yelena-malceva/docs/README.md`. Сайт: https://edu-yelena-malceva.yc-sirius-dev.pelid.team.
+- **Локальное (Minikube)**: [Инструкции](https://github.com/yelena0000/k8s-test-django/blob/main/local-minikube/docs/README.md).
+
+- **Yandex Cloud (yc-sirius-dev)**: [Инструкции](https://github.com/yelena0000/k8s-test-django/blob/main/deploy/yc-sirius-dev/edu-yelena-malceva/docs/README.md).
+
+**Описание выделенных ресурсов облачной инфраструктуры**: [edu-yelena-malceva](https://sirius-env-registry.website.yandexcloud.net/edu-yelena-malceva.html)
+
+[![Demo Version](https://img.shields.io/badge/Cайт-%E2%86%92_edu--yelena--malceva.yc--sirius--dev.pelid.team-blue)](https://edu-yelena-malceva.yc-sirius-dev.pelid.team)
 
 ## Как подготовить окружение к локальной разработке
 
