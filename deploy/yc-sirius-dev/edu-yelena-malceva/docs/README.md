@@ -1,6 +1,10 @@
 ## Развертывание в Yandex Cloud (Kubernetes кластер yc-sirius-dev)
 
-Это инструкции для деплоя Django-сайта в dev-окружении Kubernetes (`namespace: edu-yelena-malceva`). Сайт доступен по адресу: https://edu-yelena-malceva.yc-sirius-dev.pelid.team. Статика и медиа-файлы раздаются из Yandex Object Storage (`bucket: edu-yelena-malceva`).
+### Инструкции для деплоя Django-сайта в dev-окружении Kubernetes (`namespace: edu-yelena-malceva`). 
+
+Сайт доступен по адресу:  [![Demo Version](https://img.shields.io/badge/Cайт-%E2%86%92_edu--yelena--malceva.yc--sirius--dev.pelid.team-blue)](https://edu-yelena-malceva.yc-sirius-dev.pelid.team)
+
+Статика и медиа-файлы раздаются из Yandex Object Storage (`bucket: edu-yelena-malceva`).
 
 ### 1. Установите инструменты
 - [kubectl](https://kubernetes.io/docs/tasks/tools/)
